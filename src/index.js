@@ -27,7 +27,7 @@ ReactDOM.render(
     <Router>
       <Suspense fallback={<div></div>}>
         <Switch>
-          <Route path="/" exact component={App} />
+          <Route path="/home" exact component={App} />
           <Route path="*" component={App} />
         </Switch>
       </Suspense>

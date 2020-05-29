@@ -121,9 +121,7 @@ class App extends Component {
                 <div key={user.id} className="userDiv">
                   <img src={user.avatar} className="userIcon" />
                   <div className="userInfo">
-                    <div>
-                      {user.first_name}+ +{user.last_name}
-                    </div>
+                    <div>{user.first_name + " " + user.last_name}</div>
                     <div>{user.email}</div>
                   </div>
                   <FormControlLabel

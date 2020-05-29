@@ -40,3 +40,27 @@
   align-items: center;
   justify-content: space-evenly;
 }
+
+.categories{
+  width :250px
+}
+
+.search{
+  width: 250px;
+}
+
+@media screen and (max-width: 720px) {
+  .userIcon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    box-shadow : 5px 15px rgba(0, 0, 0, 0.15)
+  }
+
+  .categories{
+    width :120px
+  }
+  .search{
+    width: 150px;
+  }
+}

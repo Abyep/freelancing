@@ -18,6 +18,7 @@ class App extends Component {
       category: "",
       searchInput: "",
       categories: ["first_name", "last_name", "email"],
+      id: "",
     };
   }
 
@@ -61,10 +62,10 @@ class App extends Component {
           <TextField
             variant="outlined"
             select
-            style={{ width: "250px" }}
+            className="categories"
             native
             onChange={this.handleCategory}
-            label="Select Category"
+            label="Category"
           >
             <option aria-label="None" value="" />
             {this.state.categories.map((category, index) => (
@@ -75,6 +76,7 @@ class App extends Component {
           </TextField>
         </FormControl>
         <TextField
+          className="search"
           variant="outlined"
           value={this.state.searchInput}
           placeholder="Search"
@@ -128,8 +130,8 @@ class App extends Component {
                     control={
                       <Checkbox
                         value={this.state.id}
-                        checked={this.state.id}
-                        onChange={() => this.handleId(user.id)}
+                        checked={this.state.id == user.id ? true : false}
+                        onClick={() => this.handleId(user.id)}
                       />
                     }
                   />

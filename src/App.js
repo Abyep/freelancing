@@ -103,7 +103,7 @@ class App extends Component {
   render() {
     console.log(this.state);
     let filteredData = this.state.filteredData.slice();
-    if (this.state.searchInput !== "") {
+    if (this.state.searchInput !== "" && this.state.category !== "") {
       filteredData = this.state.filteredData.filter((data) => {
         return (
           data[this.state.category]

@@ -4,7 +4,7 @@ import { getData } from "./Saga";
 import FormControl from "@material-ui/core/FormControl";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import SearchIcon from "@material-ui/icons/Search";
-import { Paper, TextField } from "@material-ui/core";
+import { Paper, TextField, Select } from "@material-ui/core";
 import Checkbox from "@material-ui/core/Checkbox";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 
@@ -59,7 +59,7 @@ class App extends Component {
     return (
       <div className="searchDiv">
         <FormControl>
-          <TextField
+          <Select
             variant="outlined"
             select
             className="categories"
@@ -73,7 +73,7 @@ class App extends Component {
                 {this.Capitalize(category.replace("_", " "))}
               </option>
             ))}
-          </TextField>
+          </Select>
         </FormControl>
         <TextField
           className="search"
